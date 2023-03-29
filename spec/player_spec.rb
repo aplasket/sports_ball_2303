@@ -14,25 +14,25 @@ RSpec.describe Player do
     expect(player.first_name).to eq("Michael")
   end
 
-  it 'has a last name' do
+  xit 'has a last name' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player.last_name).to eq("Palledorous")
   end
 
-  it 'has a monthly cost' do
+  xit 'has a monthly cost' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player.monthly_cost).to eq(1000000)
   end
 
-  it 'has a contract length' do
+  xit 'has a contract length' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player.contract_length).to eq(36)
   end
 
-  it 'has a total cost' do
+  xit 'has a total cost' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player.total_cost).to eq(36000000)

@@ -17,7 +17,14 @@ class Team
   end
 
   def short_term_players
-    require 'pry'; binding.pry
     @roster.select {|player| player.contract_length <= 24}
+  end
+
+  def total_value
+    team_cost = []
+    @roster.map do |player|
+      team_cost << player.total_cost
+    end
+    team_cost.sum
   end
 end

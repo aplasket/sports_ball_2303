@@ -14,4 +14,7 @@ class Player
     @name.split(" ").last
   end
 
+  def total_cost
+    @contract_length * @monthly_cost
+  end
 end

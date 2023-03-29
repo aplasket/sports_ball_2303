@@ -34,5 +34,4 @@ class Team
      "player_count" => player_count
     }
   end
-
 end

@@ -1,3 +1,4 @@
+require "pry"
 require "./lib/player"
 require "./lib/team"
 

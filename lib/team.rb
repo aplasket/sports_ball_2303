@@ -1,15 +1,17 @@
 class Team
-  attr_reader :name, :location, :roster, :player_count
+  attr_reader :name, :location, :roster
   def initialize(name, location)
     @name = name
     @location = location
     @roster = []
-    @player_count = 0
+  end
+
+  def player_count 
+    @roster.length
   end
 
   def add_player(player)
     @roster << player
-    @player_count += 1
   end
 
   def long_term_players

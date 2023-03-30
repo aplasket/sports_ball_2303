@@ -7,7 +7,7 @@ RSpec.describe Team do
 
     expect(team).to be_a(Team)
     expect(team.name).to eq("Dodgers")
-    expect(team.location).to eq("Lost Angeles")
+    expect(team.location).to eq("Los Angeles")
   end
 
   it "has a roster" do

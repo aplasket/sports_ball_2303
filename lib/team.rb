@@ -24,11 +24,10 @@ class Team
   end
 
   def total_value
-    team_cost = []
-    @roster.map do |player|
-      team_cost << player.total_cost
-    end
-    team_cost.sum
+    # team_cost = @roster.map do |player|
+    #   player.total_cost
+    # end.sum
+    @roster.sum {|player| player.total_cost}
   end
 
   def details

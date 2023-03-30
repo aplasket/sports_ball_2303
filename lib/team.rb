@@ -1,5 +1,5 @@
 class Team
-  attr_reader :roster, :player_count
+  attr_reader :name, :location, :roster, :player_count
   def initialize(name, location)
     @name = name
     @location = location
@@ -17,7 +17,8 @@ class Team
   end
 
   def short_term_players
-    @roster.select {|player| player.contract_length <= 24}
+    stp = @roster.select {|player| player.contract_length <= 24}
+    stp.sort_by {|player| player.contract_length} 
   end
 
   def total_value
@@ -34,4 +35,11 @@ class Team
      "player_count" => player_count
     }
   end
+
+  # def average_cost_of_player
+  #   average = (total_value / player_count).to_s
+  #   nums_arr = []
+  #   nums_arr << ("$" + average.to_s).chars.reverse.each_slice(3)
+    
+  # end
 end

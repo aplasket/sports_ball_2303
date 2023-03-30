@@ -34,10 +34,21 @@ class Team
     }
   end
 
-  # def average_cost_of_player
-  #   average = (total_value / player_count).to_s
-  #   nums_arr = []
-  #   nums_arr << ("$" + average.to_s).chars.reverse.each_slice(3)
-    
-  # end
+  def average_cost_of_player
+    average = (total_value / player_count).to_s
+    reversed_arr = average.reverse.split("").each_slice(3).to_a
+    formatted = reversed_arr.map do |num|
+      num.reverse.join("")
+    end
+    formatted.reverse.join(",").insert(0, "$")
+  end
+
+  def players_by_last_name
+    # @roster.map do |player| 
+    #   require 'pry'; binding.pry
+    #   player.last_name
+    # end.sort.join(", ")
+    by_last_name = @roster.map {|player| player.last_name}
+    by_last_name.sort.join(", ")
+  end
 end
